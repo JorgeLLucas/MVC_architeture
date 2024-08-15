@@ -1,0 +1,11 @@
+<h1> Olá index/ controller products </h1>
+<h1> </h1>
+<h1> Sou a view da ação index do controller Products <h1>
+<h1> </h1>
+<h1> Faço parte da rota /products</h1>
+<% @products.each do |product| %>
+
+<p> <%=product.name%> </p>
+<p> <%=product.price%> </p>
+<p> <%=product.quantity%> </p>
+<% end %>
