@@ -6,15 +6,21 @@
 
 #Uso das tags <% %> para apresentação de código ruby em view HTML
 #Loop de iteração para exibir os componentes da tabela products
+
+<p> <%= link_to 'criar produto', products_path %> <p>
 <% @products.each do |product| %> 
 
 
-<!--Exibindo o campo NAME da tabela products -->
-<p> <%=product.name%> </p>
+    <!--Exibindo o campo NAME da tabela products -->
+    <p> <%=product.name%> </p>
 
-<!--Exibindo o campo PRICE da tabela products -->
-<p> <%=product.price%> </p>
+    <!--Exibindo o campo PRICE da tabela products -->
+    <p> <%=product.price%> </p>
 
-<!--Exibindo o campo quantity da tabela products -->
-<p> <%=product.quantity%> </p>
+    <!--Exibindo o campo quantity da tabela products -->
+    <p> <%=product.quantity%> </p>
+
+    <!-- Link para visualização de produtos -->
+    <p> <%= link_to 'ver produto', product %> <p>
+    
 <% end %>
