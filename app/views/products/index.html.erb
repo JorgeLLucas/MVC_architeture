@@ -7,7 +7,7 @@
 #Uso das tags <% %> para apresentação de código ruby em view HTML
 #Loop de iteração para exibir os componentes da tabela products
 
-<p> <%= link_to 'criar produto', products_path %> <p>
+<p> <%= link_to 'criar produto', new_product_path %> <p>
 <% @products.each do |product| %> 
 
 
@@ -21,6 +21,9 @@
     <p> <%=product.quantity%> </p>
 
     <!-- Link para visualização de produtos -->
-    <p> <%= link_to 'ver produto', product %> <p>
+    <%= link_to 'ver produto', product %> 
+
+    <!-- Link para edição de produtos -->
+    <%= link_to 'editar produto', edit_product_path(product) %> 
     
 <% end %>

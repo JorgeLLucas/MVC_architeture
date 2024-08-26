@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    before_action :set_product, only: [:show]
+    before_action :set_product, only: [:show, :edit, :update]
     
     def index
         @products = Product.all    #uso da variavel de instancia para que todos os elementos da tabela products sejam exibidos na view products/index
@@ -18,6 +18,16 @@ class ProductsController < ApplicationController
         else
             render :new, status: :unprocessable_entity
         end 
+    end
+
+    def edit ; end
+
+    def update 
+       if @product.update(product_params)
+            redirect_to product_url(@product)
+       else
+            render :new, status: unprocessable_entity
+       end
     end
 
     private

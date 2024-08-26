@@ -1,0 +1,17 @@
+<%= form_with(model: @product) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <h1> </h1>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+    
+    <h1> </h1>
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+   
+    
+    <h1> </h1>
+
+    <%= form.submit :"salvar" %>
+<% end %>
+eu venho da partial 
