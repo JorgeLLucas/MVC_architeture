@@ -12,21 +12,21 @@
 
 
 <!--Exibindo o campo NAME da tabela products -->
-<p> <%=product.name%> </p>
+    <p> <%=product.name%> </p>
 
 <!--Exibindo o campo PRICE da tabela products -->
-<p> <%=product.price%> </p>
+    <p> <%=product.price%> </p>
 
 <!--Exibindo o campo quantity da tabela products -->
-<p> <%=product.quantity%> </p>
+    <p> <%=product.quantity%> </p>
 
 <!-- Link para visualização de produtos -->
-<%= link_to 'ver produto', product %> 
+    <%= link_to 'ver produto', product %> 
 
 <!-- Link para edição de produtos -->
-<%= link_to 'editar produto', edit_product_path(product) %>
+    <%= link_to 'editar produto', edit_product_path(product) %>
 
-<%= button_to 'apagar', product, method: :delete, data: { confirm: "Você tem certeza que quer apagar?" } %>
+    <%= button_to 'apagar', product, method: :delete, data: { confirm: "Você tem certeza que quer apagar?" } %>
 
     
 

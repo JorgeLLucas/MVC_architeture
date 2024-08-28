@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
             redirect_to product_url(@product)
         else
             render :new, status: :unprocessable_entity
-        end 
+        end
     end
 
     def edit ; end
@@ -32,11 +32,9 @@ class ProductsController < ApplicationController
 
     
     def destroy
-       if @product.destroy
-            redirect_to product_url
-       else
-            redirect_to @product
-       end
+       @product = Product.find(params[:id])
+       @product.destroy
+       redirect_to products_path, notice: "Produto deletado"
     end
 
    
@@ -45,10 +43,7 @@ class ProductsController < ApplicationController
 
     
     def set_product
-        @product = Product.find_by(params[:id])
-        unless @product
-            redirect_to product_url, alert: "Producto não encontrado"
-        end
+        @product = Product.find(params[:id])
     end
 
     def product_params
