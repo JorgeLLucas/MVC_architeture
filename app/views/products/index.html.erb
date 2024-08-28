@@ -1,3 +1,5 @@
+<div class="product-container">
+
 <h1> Olá index/ controller products </h1>
 <h1> </h1>
 <h1> Sou a view da ação index do controller Products <h1>
@@ -7,28 +9,31 @@
 #Uso das tags <% %> para apresentação de código ruby em view HTML
 #Loop de iteração para exibir os componentes da tabela products
 
-<p> <%= link_to 'criar produto', new_product_path %> <p>
-<% @products.each do |product| %> 
+
+    <p> <%= link_to 'criar produto', new_product_path %> <p>
+    <% @products.each do |product| %> 
 
 
-<!--Exibindo o campo NAME da tabela products -->
-    <p> <%=product.name%> </p>
+    <!--Exibindo o campo NAME da tabela products -->
+        <h1><p> <%=product.name%> </p></h1>
 
-<!--Exibindo o campo PRICE da tabela products -->
-    <p> <%=product.price%> </p>
+    <!--Exibindo o campo PRICE da tabela products -->
+        <h1><p> <%=product.price%> </p></h1>
 
-<!--Exibindo o campo quantity da tabela products -->
-    <p> <%=product.quantity%> </p>
+    <!--Exibindo o campo quantity da tabela products -->
+        <h1><p> <%=product.quantity%> </p></h1>
 
-<!-- Link para visualização de produtos -->
-    <%= link_to 'ver produto', product %> 
+    <!-- Link para visualização de produtos -->
+        <h1><%= link_to 'ver produto', product %></h1> 
 
-<!-- Link para edição de produtos -->
-    <%= link_to 'editar produto', edit_product_path(product) %>
+    <!-- Link para edição de produtos -->
+        <h1><%= link_to 'editar produto', edit_product_path(product) %></h1>
 
-    <%= button_to 'apagar', product, method: :delete, data: { confirm: "Você tem certeza que quer apagar?" } %>
+        <h1><%= button_to 'apagar', product, method: :delete, data: { confirm: "Você tem certeza que quer apagar?" } %></h1>
 
-    
+       
 
     
 <% end %>
+
+ </div>
