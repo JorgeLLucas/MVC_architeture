@@ -8,16 +8,16 @@ body {
 }
 
 h1 {
-    color: #eeecec;
+    color: #070707;
 }
 
 .product-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #3213dd;
+    border: 1px solid #f9f8fd;
     border-radius: 5px;
-    background-color: #4712b1;
+    background-color: #f6f4fc;
 }
 
 .product-container h2 {
@@ -31,12 +31,12 @@ h1 {
 .btn {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #101111;
     color: rgb(240, 14, 14);
     border-radius: 5px;
     text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #077cfa;
+    background-color: #0f0f0f;
 }
