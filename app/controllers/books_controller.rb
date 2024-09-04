@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+    before_action :set_product, only: [:show, :edit, :update, :destroy]
+
     def index 
         @books = Book.all
     end
@@ -14,6 +16,14 @@ class BooksController < ApplicationController
         if @book.save
             redirect_to book_path(@books)
         else
+            render :new, status: :unprocessable_entity
+        end
+    end
+
+    def update 
+        if @book.update(book_params) 
+            redirect_to book_path(@books)
+        else 
             render :new, status: :unprocessable_entity
         end
     end
