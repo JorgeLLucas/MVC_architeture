@@ -7,3 +7,26 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+require 'faker'
+
+Faker::Config.locale ='pt-BR'
+
+10.times do 
+    doctor = Doctor.create!(
+        name: Faker::Name.name
+    )
+
+    5.times do 
+        patient = Patient.create!(
+            name: Faker::Name.name 
+        )
+
+        Appointment.create!(
+            doctor: doctor, 
+            patient: patient,
+            date: Faker::Date.forward(days: 30)
+        )
+    end
+end
