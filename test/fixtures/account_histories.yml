@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: 1
-  supplier: one
+  date: 2024-09-26
+  account: one
 
 two:
-  number: 1
-  supplier: two
+  date: 2024-09-26
+  account: two

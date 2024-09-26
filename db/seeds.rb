@@ -13,20 +13,24 @@ require 'faker'
 
 Faker::Config.locale ='pt-BR'
 
-10.times do 
-    doctor = Doctor.create!(
-        name: Faker::Name.name
-    )
+ 
+doctor = Doctor.create!(name: Faker::Name.name)
+    
 
-    5.times do 
-        patient = Patient.create!(
-            name: Faker::Name.name 
-        )
+ 
+patient = Patient.create!(name: Faker::Name.name)
 
-        Appointment.create!(
-            doctor: doctor, 
-            patient: patient,
-            date: Faker::Date.forward(days: 30)
-        )
+Appointment.create!(doctor: doctor, patient: patient, date: Faker::Date.forward(days: 30))
+    end
+end
+
+
+
+s1 = Supplier.create!(name: Faker::Name.name )
+
+a1 = Account.create!(number: Faker::Number.number(digits: 3), supplier: s1)
+
+AccountHistory.create(date: Date.today, account: a1)
+
     end
 end

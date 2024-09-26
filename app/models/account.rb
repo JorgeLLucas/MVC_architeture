@@ -1,3 +1,3 @@
 class Account < ApplicationRecord
-  belongs_to :author
+  belongs_to :supplier
 end
