@@ -14,15 +14,15 @@ require 'faker'
 Faker::Config.locale ='pt-BR'
 
  
-doctor = Doctor.create!(name: Faker::Name.name)
+#doctor = Doctor.create!(name: Faker::Name.name)
     
 
  
-patient = Patient.create!(name: Faker::Name.name)
+#patient = Patient.create!(name: Faker::Name.name)
 
-Appointment.create!(doctor: doctor, patient: patient, date: Faker::Date.forward(days: 30))
-    end
-end
+#Appointment.create!(doctor: doctor, patient: patient, date: Faker::Date.forward(days: 30))
+#    end
+#end
 
 
 
@@ -30,7 +30,4 @@ s1 = Supplier.create!(name: Faker::Name.name )
 
 a1 = Account.create!(number: Faker::Number.number(digits: 3), supplier: s1)
 
-AccountHistory.create(date: Date.today, account: a1)
-
-    end
-end
+AccountHistory.create!(date: Date.today, account: a1)
